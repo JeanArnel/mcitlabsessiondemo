@@ -14,11 +14,11 @@ locals{
   landmark3="Walmart"
   landmark4="Metro"
   landmark5="Pharmaprix"
-  lengthLandmark1=length(landmark1)
-  lengthLandmark2=length(landmark2)
-  lengthLandmark3=length(landmark3)
-  lengthLandmark4=length(landmark4)
-  lengthLandmark5=length(landmark5)
+  lengthLandmark1=length(local.landmark1)
+  lengthLandmark2=length(local.landmark2)
+  lengthLandmark3=length(local.landmark3)
+  lengthLandmark4=length(local.landmark4)
+  lengthLandmark5=length(local.landmark5)
   }
 output "print"{
     value = local.servicename
