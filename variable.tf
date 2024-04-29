@@ -44,3 +44,30 @@ variable "environment"{
  type=string
  default="staging"
 }
+variable "Company-name"{
+type=string
+default="IT Consulting"
+}
+
+variable "Years-of-establishment"{
+type=number
+default=15
+}
+
+variable "ifelsecheck"{
+type=bool
+default=true
+}
+
+output "Company-name" {
+value=var.Company-name
+}
+
+output "Years-of-establishment" {
+value=var.Years-of-establishment
+}
+
+output "ifelsecheck" {
+value=var.ifelsecheck
+}
+
