@@ -9,7 +9,17 @@ locals{
   firstname="tamgho"
   lastname="arnel"
   city="Montreal"
-}
+  landmark1="Dollarama"
+  landmark2="Maxi"
+  landmark3="Walmart"
+  landmark4="Metro"
+  landmark5="Pharmaprix"
+  lengthLandmark1=length(landmark1)
+  lengthLandmark2=length(landmark2)
+  lengthLandmark3=length(landmark3)
+  lengthLandmark4=length(landmark4)
+  lengthLandmark5=length(landmark5)
+  }
 output "print"{
     value = local.servicename
 }
@@ -39,4 +49,34 @@ output "fourthprint"{
 }
 output "fifthprint"{
     value = local.city
+}
+output "Landmark1"{
+    value = local.landmark1
+}
+output "Landmark2"{
+    value = local.landmark2
+}
+output "Landmark3"{
+    value = local.landmark3
+}
+output "Landmark4"{
+    value = local.landmark4
+}
+output "Landmark5"{
+    value = local.landmark5
+}
+output "lengthlandmark1"{
+    value=local.lengthLandmark1
+}
+output "lengthLandmark2"{
+    value=local.lengthLandmark2
+}
+output "lengthLandmark3"{
+    value=local.lengthLandmark3
+}
+output "lengthLandmark4"{
+    value=local.lengthLandmark4
+}
+output "lengthLandmark5"{
+    value=local.lengthLandmark5
 }
