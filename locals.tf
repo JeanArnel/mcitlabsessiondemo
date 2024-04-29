@@ -20,6 +20,7 @@ locals{
   lengthLandmark4=length(local.landmark4)
   lengthLandmark5=length(local.landmark5)
   }
+/*
 output "print"{
     value = local.servicename
 }
@@ -80,3 +81,4 @@ output "lengthLandmark4"{
 output "lengthLandmark5"{
     value=local.lengthLandmark5
 }
+/*
