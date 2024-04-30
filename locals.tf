@@ -20,6 +20,8 @@ locals{
   lengthLandmark4=length(local.landmark4)
   lengthLandmark5=length(local.landmark5)
   winterlistofsports=["icehockey", "snowboarding", "icekating"]
+  montrealuniversities=["Mc Gill", "Université de Montréal", "UQAM", "Polytechnique", "Concordia"]
+  montrealrestaurants=["Scores", "Tuck shop", "Express", "Majestic", "Steakhouse"]
   }
 /*
 output "print"{
@@ -85,4 +87,12 @@ output "lengthLandmark5"{
 */
 output "wintersportlist"{
 value=[for sport in local.winterlistofsports:sport]
+}
+
+output "montrealuniversities"{
+value=[for university in local.montrealuniversities:university]
+}
+
+output "montrealrestaurants" {
+value=[for restaurant in local.montrealrestaurants:restaurant]
 }
