@@ -84,5 +84,5 @@ output "lengthLandmark5"{
 }
 */
 output "wintersportlist"{
-for sport in local.winterlistofsports:sport
+value=[for sport in local.winterlistofsports:sport]
 }
