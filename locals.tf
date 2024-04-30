@@ -22,6 +22,8 @@ locals{
   winterlistofsports=["icehockey", "snowboarding", "icekating"]
   montrealuniversities=["Mc Gill", "Université de Montréal", "UQAM", "Polytechnique", "Concordia"]
   montrealrestaurants=["Scores", "Tuck shop", "Express", "Majestic", "Steakhouse"]
+  total_output=["150", "150", "150"]
+  listofnumber=[4,5,1,2,3,4,5]
   }
 /*
 output "print"{
@@ -93,6 +95,14 @@ output "montrealuniversities"{
 value=[for university in local.montrealuniversities:university]
 }
 
-output "montrealrestaurants" {
+output "montrealrestaurants"{
 value=[for restaurant in local.montrealrestaurants:restaurant]
+}
+
+output "sumofthreenumbers"{
+value=sum([for numberoutput in local.total_output:tonumber(numberoutput)])
+}
+
+output "sumofnumbers"{
+value=sum(for number in local.listofnumber:number)
 }
