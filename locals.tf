@@ -19,6 +19,7 @@ locals{
   lengthLandmark3=length(local.landmark3)
   lengthLandmark4=length(local.landmark4)
   lengthLandmark5=length(local.landmark5)
+  winterlistofsports=["icehockey", "snowboarding", "icekating"]
   }
 /*
 output "print"{
@@ -82,3 +83,6 @@ output "lengthLandmark5"{
     value=local.lengthLandmark5
 }
 */
+output "wintersportlist"{
+for sport in local.winterlistofsports:sport
+}
