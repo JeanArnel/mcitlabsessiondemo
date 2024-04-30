@@ -104,5 +104,5 @@ value=sum([for numberoutput in local.total_output:tonumber(numberoutput)])
 }
 
 output "sumofnumbers"{
-value=sum(for number in local.listofnumber:number)
+value=sum([for number in local.listofnumber:number])
 }
