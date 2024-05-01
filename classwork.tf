@@ -33,7 +33,7 @@ output "join_example" {
 
 # Function 6: Substring - Extract firstname from the string
 output "substring_example" {
-  value = substr(var.original_string, 14, 0)
+  value = substr(var.original_string, 10, -1)
 }
 
 # Function 7: Concatenate with another string
