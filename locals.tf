@@ -86,7 +86,7 @@ output "lengthLandmark4"{
 output "lengthLandmark5"{
     value=local.lengthLandmark5
 }
-*/
+
 output "wintersportlist"{
 value=[for sport in local.winterlistofsports:sport]
 }
@@ -106,3 +106,4 @@ value=sum([for numberoutput in local.total_output:tonumber(numberoutput)])
 output "sumofnumbers"{
 value=sum([for number in local.listofnumber:number])
 }
+*/
