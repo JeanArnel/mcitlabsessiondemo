@@ -1,8 +1,8 @@
 //==================================================1st May 2024=========================================//
-variable "original_string" {
+/* variable "original_string" {
   default = "Montreal College Information Technology"
 }
-/*
+
 # Function 1: Length of the string
 output "string_length" {
   value = length(var.original_string)
