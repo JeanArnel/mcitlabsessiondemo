@@ -2,7 +2,7 @@
 variable "original_string" {
   default = "Montreal College Information Technology"
 }
-
+/*
 # Function 1: Length of the string
 output "string_length" {
   value = length(var.original_string)
@@ -77,3 +77,4 @@ output "string_contains_no_sample" {
 output "string_contains_sample" {
   value = local.contains_keyword ? "String contains 'Montreal'" : "String does not contain 'Montreal'"
 }
+*/
