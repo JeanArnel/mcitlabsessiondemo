@@ -20,36 +20,38 @@ output "lowercase_string" {
 
 # Function 4: Replace "Hello" with "Hi"
 output "replaced_string" {
-  value = replace(var.original_string, "Montreal College Information Technology", "McGill University")
+  value = replace(var.original_string, "Jean Arnel", "Tamgho Fodouop")
 }
 
-# Function 5: Concatenate with another string
+# Function 5: Join a list of strings into a single string with a separator
+variable "string_list" {
+  default = ["Tamgho", "Fodouop","Jean", "Arnel"]
+}
+output "join_example" {
+  value = join(".", var.string_list)
+}
+
+# Function 6: Substring - Extract firstname from the string
+output "substring_example" {
+  value = substr(var.original_string, 14, 0)
+}
+
+# Function 7: Concatenate with another string
 variable "additional_string" {
-  default = " from Terraform"
+  default = " from Lachine"
 }
 
 output "concatenated_string" {
   value = "${var.original_string}${var.additional_string}"
 }
 
-# Function 6: Substring - Extract "World" from the string
-output "substring_example" {
-  value = substr(var.original_string, 6, -1)
-}
+/*
 
-# Function 7: Split the string by space into a list
+# Function 8: Split the string by space into a list
 output "split_example" {
   value = split(" ", var.original_string)
 }
 
-# Function 8: Join a list of strings into a single string with a separator
-variable "string_list" {
-  default = ["Tamgho", "Fodouop","Jean","Arnel"]
-}
-
-output "join_example" {
-  value = join(".", var.string_list)
-}
 
 # Function 9: Trim leading and trailing whitespace
 variable "whitespace_string" {
@@ -77,3 +79,4 @@ output "string_contains_no_sample" {
 output "string_contains_sample" {
   value = local.contains_keyword ? "String contains 'Montreal'" : "String does not contain 'Montreal'"
 }
+*/
