@@ -63,7 +63,7 @@ variable "summerrsportslist"{
 type=list(string)
 default=["soccer", "basketball", "badminton", "tabletennis"]
 }
-
+/*
 output "Company-name" {
 value=var.Company-name
 }
@@ -79,4 +79,4 @@ value=var.ifelsecheck
 output "summersportslist"{
 value=[for summersport in var.summerrsportslist:summersport]
 }
-
+*/
