@@ -20,7 +20,7 @@ output "lowercase_string" {
 
 # Function 4: Replace "Hello" with "Hi"
 output "replaced_string" {
-  value = replace(var.original_string, "Jean Arnel", "Tamgho Fodouop")
+  value = replace(var.original_string, "Tamgho Fodouop","Jean Arnel")
 }
 
 # Function 5: Join a list of strings into a single string with a separator
@@ -33,7 +33,7 @@ output "join_example" {
 
 # Function 6: Substring - Extract firstname from the string
 output "substring_example" {
-  value = substr(var.original_string, 10, -1)
+  value = substr(var.original_string, 13, 0)
 }
 
 # Function 7: Concatenate with another string
