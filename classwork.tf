@@ -33,7 +33,7 @@ output "join_example" {
 
 # Function 6: Substring - Extract firstname from the string
 output "substring_example" {
-  value = substr(var.original_string, 0, 13)
+  value = substr(var.original_string, 0, 14)
 }
 
 # Function 7: Concatenate with another string
@@ -44,6 +44,20 @@ variable "additional_string" {
 output "concatenated_string" {
   value = "${var.original_string}${var.additional_string}"
 }
+
+# Function 8: Researching a set of string in another one
+locals {
+  contains_keyword = contains(split(" ", var.original_string), "Montreal")
+}
+
+
+
+
+
+
+
+
+
 
 /*
 
