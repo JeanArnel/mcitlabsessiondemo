@@ -86,7 +86,7 @@ output "reverse_example" {
 
 
 output "join_example" {
-  value = join("+", original_string)
+  value = join("+", var.original_string)
 }
 
 locals {
