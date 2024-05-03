@@ -25,5 +25,5 @@ character_enemy_map= { for index,character in local.characters: character=> loca
 }
 
 output{
-value= character_enemy_map
+value= local.character_enemy_map
 }
