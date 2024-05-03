@@ -1,9 +1,9 @@
 //==================================================1st May 2024=========================================//
-variable "original_string" {
+/*variable "original_string" {
  // default = "Tamgho Fodouop Jean Arnel"
   default = ["USA","England","France","Brazil","South-Africa"]
 }
-/*
+
 # Function 1: Length of the string
 output "string_length" {
   value = length(var.original_string)
