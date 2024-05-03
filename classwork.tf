@@ -91,11 +91,12 @@ output "join_example" {
 
 locals {
   contains_keyword = contains(var.original_string, "Canada")
-}
-
 output "checking" {
   value = locals.contains_keyword
 }
+}
+
+
 
 
 variable "additional_string" {
