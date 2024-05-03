@@ -103,7 +103,7 @@ variable "extra_string" {
 }
 
 output "concatenated_string" {
-  value = "${var.additional_string}${replace(var.extra_string, " ","")}"
+  value = "${var.additional_string}${join(" ",replace(var.extra_string, " ",""))}"
 }
 
 
@@ -116,7 +116,7 @@ output "changing_case" {
 }*/
 
 output "reverse_example" {
-  value = join("", reverse(split("", var.case1)))
+  value = join("", reverse(lower(split("", var.case1))))
 }
 
 
