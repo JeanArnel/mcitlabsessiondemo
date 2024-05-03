@@ -96,9 +96,6 @@ output "checking" {
   value = locals.contains_keyword ?
 }
 
-
-
-
 variable "additional_string" {
   default = "I love "
 }
