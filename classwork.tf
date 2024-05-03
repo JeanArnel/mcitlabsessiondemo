@@ -1,8 +1,9 @@
 //==================================================1st May 2024=========================================//
 variable "original_string" {
-  default = "Tamgho Fodouop Jean Arnel"
+ // default = "Tamgho Fodouop Jean Arnel"
+  default = ["USA","England","France","Brazil","South-Africa"]
 }
-
+/*
 # Function 1: Length of the string
 output "string_length" {
   value = length(var.original_string)
@@ -50,16 +51,13 @@ locals {
   contains_keyword = contains(split(" ", var.original_string), "Montreal")
 }
 
+output "string_contains_no_sample" {
+  value = local.contains_keyword ? "String contains 'Mcit'" : "String does not contain 'Mcit'"
+}
 
-
-
-
-
-
-
-
-
-/*
+output "string_contains_sample" {
+  value = local.contains_keyword ? "String contains 'Montreal'" : "String does not contain 'Montreal'"
+}
 
 # Function 8: Split the string by space into a list
 output "split_example" {
@@ -81,16 +79,45 @@ output "reverse_example" {
   value = join("", reverse(split("", var.original_string)))
 }
 
-locals {
-  contains_keyword = contains(split(" ", var.original_string), "Montreal")
-}
 
-
-output "string_contains_no_sample" {
-  value = local.contains_keyword ? "String contains 'Mcit'" : "String does not contain 'Mcit'"
-}
-
-output "string_contains_sample" {
-  value = local.contains_keyword ? "String contains 'Montreal'" : "String does not contain 'Montreal'"
-}
 */
+
+
+
+
+output "join_example" {
+  value = join("+", original_string)
+}
+
+locals {
+  contains_keyword = contains(var.original_string, "Canada")
+}
+
+
+variable "additional_string" {
+  default = "I love"
+}
+
+variable "extra_string" {
+  default = "Canada "
+}
+
+output "concatenated_string" {
+  value = "${var.additional_string}${replace(var.extra_string, " ","")}"
+}
+
+
+variable "case1" {
+  default = "upper LOWER"
+}
+/*
+output "changing_case" {
+  value = "${var.case1}${replace(var.case1, " ","")}"
+}*/
+
+output "reverse_example" {
+  value = join("", reverse(split("", var.case1)))
+}
+
+
+
