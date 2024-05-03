@@ -93,7 +93,7 @@ locals {
   contains_keyword = contains(var.original_string, "Canada")
 }
 output "checking" {
-  value = local.contains_keyword ?
+  value = locals.contains_keyword ?
 }
 
 
