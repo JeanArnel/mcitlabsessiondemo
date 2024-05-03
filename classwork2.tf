@@ -22,8 +22,9 @@ characters=["luke", "yoda", "darth"]
 enemies_destroyed= [4252, 900, 200000056894]
 character_enemy_map= { for index,character in local.characters: character=> local.enemies_destroyed[index]
 }
-}
-
 output{
 value= local.character_enemy_map
 }
+}
+
+
