@@ -116,7 +116,7 @@ output "changing_case" {
 }*/
 
 output "reverse_example" {
-  value = join("", !lower(split("", var.case1)))
+  value = !lower(split("", var.case1))
 }
 
 
