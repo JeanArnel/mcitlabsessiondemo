@@ -93,6 +93,10 @@ locals {
   contains_keyword = contains(var.original_string, "Canada")
 }
 
+output "checking" {
+  value = locals.contains_keyword
+}
+
 
 variable "additional_string" {
   default = "I love "
@@ -113,11 +117,11 @@ variable "case1" {
 /*
 output "changing_case" {
   value = "${var.case1}${replace(var.case1, " ","")}"
-}*/
-
-output "reverse_example" {
-  value = !lower(split("", var.case1))
 }
 
+output "changing_case" {
+  value = join(lower(split("", var.case1))
+}
+*/
 
 
