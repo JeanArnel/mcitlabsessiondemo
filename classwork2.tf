@@ -14,5 +14,5 @@ group2= {"name"= "Bob", "age"= "30"}
 }
 }
 output "flatened_map"{
-value= flatten([for k,v in var.nested_map]:[for kk, w in v:{group= k, key=kk, value=w}])
+value= flatten([for k,v in var.nested_map:[for kk, vv in v:{group= k, key=kk, value=vv}]])
 }
