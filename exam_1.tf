@@ -22,6 +22,6 @@ type= list(list(string))
 default=[[1,2,3],[1,2],[1,2,3,4],[1,2,3,4,5]]
 }
 output "flattened_list"{
-value= flatten(nested-list)
+value= flatten(var.nested-list)
 }
 
