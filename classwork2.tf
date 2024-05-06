@@ -1,4 +1,4 @@
-variable "simple_nested-list"{
+/*variable "simple_nested-list"{
 type= list(list(string))
 default=[["a","b"],["c","d"],["e","f"]]
 }
@@ -27,4 +27,4 @@ value= { for index,character in local.characters: character=> local.enemies_dest
 }
 }
 
-
+*/
