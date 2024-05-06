@@ -16,3 +16,4 @@ value=local.new_clouds_set
 output"cloud_owners_map"{
 value= { for index,cloud in local.clouds: cloud=> local.cloud_owners[index]
 }
+}
