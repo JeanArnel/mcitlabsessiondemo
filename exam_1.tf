@@ -3,6 +3,7 @@ locals {
 clouds= ["azure","aws","gcp"] 
 contains_word= contains(local.clouds, "azure")
 new_clouds_set=concat(local.clouds, ["alibaba", "ibm"])
+cloud_owners= ["Microsoft", "Amazon", "Google"]
 }
 output "check_if" {
 value=local.contains_word? "azure is part of the cloud list": "azure is not part of the cloud list"
@@ -11,4 +12,7 @@ value=local.contains_word? "azure is part of the cloud list": "azure is not part
 
 output "new_clouds_set"{
 value=local.new_clouds_set
+}
+output"cloud_owners_map"{
+value= { for index,cloud in local.clouds: cloud=> local.cloud_owners[index]
 }
