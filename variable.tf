@@ -63,6 +63,11 @@ variable "summerrsportslist"{
 type=list(string)
 default=["soccer", "basketball", "badminton", "tabletennis"]
 }
+
+variable "resource_group1"{
+name= azurerm_resource_group.azureresourcegroup.name
+
+}
 /*
 output "Company-name" {
 value=var.Company-name
