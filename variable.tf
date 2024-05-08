@@ -64,7 +64,7 @@ type=list(string)
 default=["soccer", "basketball", "badminton", "tabletennis"]
 }
 
-variable "resource_group1"{
+variable "resource_group12"{
 name= azurerm_resource_group.azureresourcegroup.name
 
 }
