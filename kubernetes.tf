@@ -116,6 +116,13 @@ resource "azurerm_kubernetes_cluster" "example5" {
   }
 }
 
+variable{
+type= list(string)
+clusterlist=["montrealcluster","torontocluster","vancouvercluster","albertacluster"]
+}
+
+
+
 
 
  /*
