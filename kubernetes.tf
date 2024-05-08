@@ -11,7 +11,7 @@ resource "azurerm_resource_group" "example" {
   location = "West Europe"
 }
  
-resource "azurerm_kubernetes_cluster" "example" {
+resource "azurerm_kubernetes_cluster" "example1" {
   name                = "lknmdi876"
   location            = azurerm_resource_group.azureresourcegroup.location
   resource_group_name = azurerm_resource_group.azureresourcegroup.name
@@ -32,7 +32,7 @@ resource "azurerm_kubernetes_cluster" "example" {
   }
 }
 
-resource "azurerm_kubernetes_cluster" "example" {
+resource "azurerm_kubernetes_cluster" "example2" {
   name                = "arcdst2014"
   location            = azurerm_resource_group.azureresourcegroup.location
   resource_group_name = azurerm_resource_group.azureresourcegroup.name
@@ -53,7 +53,7 @@ resource "azurerm_kubernetes_cluster" "example" {
   }
 }
 
-resource "azurerm_kubernetes_cluster" "example" {
+resource "azurerm_kubernetes_cluster" "example3" {
   name                = "grdfauy5648"
   location            = azurerm_resource_group.azureresourcegroup.location
   resource_group_name = azurerm_resource_group.azureresourcegroup.name
@@ -74,7 +74,7 @@ resource "azurerm_kubernetes_cluster" "example" {
   }
 }
 
-resource "azurerm_kubernetes_cluster" "example" {
+resource "azurerm_kubernetes_cluster" "example4" {
   name                = "sxczva64578"
   location            = azurerm_resource_group.azureresourcegroup.location
   resource_group_name = azurerm_resource_group.azureresourcegroup.name
@@ -95,7 +95,7 @@ resource "azurerm_kubernetes_cluster" "example" {
   }
 }
 
-resource "azurerm_kubernetes_cluster" "example" {
+resource "azurerm_kubernetes_cluster" "example5" {
   name                = "nmcvbas879521"
   location            = azurerm_resource_group.azureresourcegroup.location
   resource_group_name = azurerm_resource_group.azureresourcegroup.name
