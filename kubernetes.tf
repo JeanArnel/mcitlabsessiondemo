@@ -116,12 +116,17 @@ resource "azurerm_kubernetes_cluster" "example5" {
   }
 }    */
 
+variable "cluster_name"{
+type= list(string)
+default= ["mtlcluster","torcluster","vancluster","albcluster"]
+}
 resource "azurerm_kubernetes_cluster" "batchabcd"{
-name=["mtlcluster","torcluster","vancluster","albcluster"]
+for_each            = {for cluster in var.cluster_name: cluster=>cluster}
+  name                = "${var.prefix}cluster"
 location= "canadacentral"
 resource_group_name = azurerm_resource_group.azureresourcegroup.name
 }
-
+  
 
 resource "azurerm_kubernetes_cluster_node_pool" "kube1nodepool" {
  for_each               = azurerm_kubernetes_cluster.batchabcd
@@ -130,10 +135,19 @@ resource "azurerm_kubernetes_cluster_node_pool" "kube1nodepool" {
  vm_size                = "Standard_DS2_v2"
  node_count             = 1
 
+
+default_node_pool {
+    name       = "default"
+    node_count = 1
+    vm_size    = "Standard_D2_v2"
+  }
+
   tags = {
     Environment = "Production"
   }
 }
+
+  
 
 
  /*
