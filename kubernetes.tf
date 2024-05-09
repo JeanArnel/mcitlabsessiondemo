@@ -125,6 +125,7 @@ for_each            = {for cluster in var.cluster_name: cluster=>cluster}
   name                = "${var.prefix}cluster"
 location= "canadacentral"
 resource_group_name = azurerm_resource_group.azureresourcegroup.name
+dns_prefix          = "exampleaks"
 
  default_node_pool {
     name       = "default"
