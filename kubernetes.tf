@@ -117,8 +117,9 @@ resource "azurerm_kubernetes_cluster" "example5" {
 }    */
 
 resource "azurerm_kubernetes_cluster" "batchabcd"{
-type= list(string)
-default=["mtlcluster","torcluster","vancluster","albcluster"]
+name=["mtlcluster","torcluster","vancluster","albcluster"]
+location= "canadacentral"
+resource_group_name = azurerm_resource_group.azureresourcegroup.name
 }
 
 
