@@ -10,7 +10,7 @@ resource "azurerm_resource_group" "example" {
   name     = "example-resources"
   location = "West Europe"
 }
- 
+ /*
 resource "azurerm_kubernetes_cluster" "example1" {
   name                = "lknmdi876"
   location            = azurerm_resource_group.azureresourcegroup.location
@@ -114,15 +114,25 @@ resource "azurerm_kubernetes_cluster" "example5" {
   tags = {
     Environment = "Production"
   }
-}
+}    */
 
-variable{
+resource "azurerm_kubernetes_cluster" "batchabcd"{
 type= list(string)
-clusterlist=["montrealcluster","torontocluster","vancouvercluster","albertacluster"]
+default=["mtlcluster","torcluster","vancluster","albcluster"]
 }
 
 
+resource "azurerm_kubernetes_cluster_node_pool" "kube1nodepool" {
+ for_each               = azurerm_kubernetes_cluster.batchabcd
+ name                   = "${each.key}"
+ kubernetes_cluster_id  = each.value.id
+ vm_size                = "Standard_DS2_v2"
+ node_count             = 1
 
+  tags = {
+    Environment = "Production"
+  }
+}
 
 
  /*
