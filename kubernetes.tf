@@ -114,7 +114,7 @@ resource "azurerm_kubernetes_cluster" "example5" {
   tags = {
     Environment = "Production"
   }
-}    */
+}    
 
 variable "cluster_name"{
 type= list(string)
