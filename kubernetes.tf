@@ -10,7 +10,7 @@ resource "azurerm_resource_group" "example" {
   name     = "example-resources"
   location = "West Europe"
 }
- /*
+
 resource "azurerm_kubernetes_cluster" "example1" {
   name                = "lknmdi876"
   location            = azurerm_resource_group.azureresourcegroup.location
@@ -126,7 +126,9 @@ for_each            = {for cluster in var.cluster_name: cluster=>cluster}
 location= "canadacentral"
 resource_group_name = azurerm_resource_group.azureresourcegroup.name
 dns_prefix          = "exampleaks"
-
+identity{
+  type ="SystemAssigned"
+}
  default_node_pool {
     name       = "default"
     node_count = 1
