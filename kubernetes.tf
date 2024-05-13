@@ -144,18 +144,16 @@ resource "azurerm_kubernetes_cluster_node_pool" "kube1nodepool" {
  vm_size                = "Standard_DS2_v2"
  node_count             = 1
 
+  tags = {
+    Environment = "Production"
+  }
+}
 
 default_node_pool {
     name       = "default"
     node_count = 1
     vm_size    = "Standard_D2_v2"
   }
-
-  tags = {
-    Environment = "Production"
-  }
-}
-
   
 
 
